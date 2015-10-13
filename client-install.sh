@@ -35,17 +35,17 @@ fi
 logger "Configuring apt for release/mirror provided..."
 mv /etc/apt/sources.list /etc/apt/sources.list.bak
 cat > /etc/apt/sources.list <<EOL
-deb http://${SRC_MIRROR}/ubuntu ${SRC_RELEASE} main restricted universe multiverse
-deb http://${SRC_MIRROR}/ubuntu ${SRC_RELEASE}-security main restricted universe multiverse
-deb http://${SRC_MIRROR}/ubuntu ${SRC_RELEASE}-updates main restricted universe multiverse
-#deb http://${SRC_MIRROR}/ubuntu ${SRC_RELEASE}-proposed main restricted universe multiverse
-deb http://${SRC_MIRROR}/ubuntu ${SRC_RELEASE}-backports main restricted universe multiverse
+deb http://${MIRROR}/ubuntu ${SRC_RELEASE} main restricted universe multiverse
+deb http://${MIRROR}/ubuntu ${SRC_RELEASE}-security main restricted universe multiverse
+deb http://${MIRROR}/ubuntu ${SRC_RELEASE}-updates main restricted universe multiverse
+#deb http://${MIRROR}/ubuntu ${SRC_RELEASE}-proposed main restricted universe multiverse
+deb http://${MIRROR}/ubuntu ${SRC_RELEASE}-backports main restricted universe multiverse
 
-deb-src http://${SRC_MIRROR}/ubuntu ${SRC_RELEASE} main restricted universe multiverse
-deb-src http://${SRC_MIRROR}/ubuntu ${SRC_RELEASE}-security main restricted universe multiverse
-deb-src http://${SRC_MIRROR}/ubuntu ${SRC_RELEASE}-updates main restricted universe multiverse
-#deb-src http://${SRC_MIRROR}/ubuntu ${SRC_RELEASE}-proposed main restricted universe multiverse
-deb-src http://${SRC_MIRROR}/ubuntu ${SRC_RELEASE}-backports main restricted universe multiverse
+deb-src http://${MIRROR}/ubuntu ${SRC_RELEASE} main restricted universe multiverse
+deb-src http://${MIRROR}/ubuntu ${SRC_RELEASE}-security main restricted universe multiverse
+deb-src http://${MIRROR}/ubuntu ${SRC_RELEASE}-updates main restricted universe multiverse
+#deb-src http://${MIRROR}/ubuntu ${SRC_RELEASE}-proposed main restricted universe multiverse
+deb-src http://${MIRROR}/ubuntu ${SRC_RELEASE}-backports main restricted universe multiverse
 EOL
 
 # Update apt repos
