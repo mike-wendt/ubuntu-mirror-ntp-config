@@ -38,7 +38,7 @@ apt-get update
 
 # Install apt-mirror, apache, ntp
 logger "Installting apt-mirror, apache & ntp..."
-apt-get install apt-mirror ntp apache2 -y
+apt-get install apt-mirror ntp ntpdate apache2 -y
 
 # Configure NTP
 logger "Configuring NTP..."
