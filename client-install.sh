@@ -81,6 +81,11 @@ server ${MIRROR} iburst
 logfile /var/log/ntpd.log
 EOL
 
+# Log file conf
+logger "Setting up NTP log file..."
+touch /var/log/ntpd.log
+chown ntp:ntp /var/log/ntpd.log
+
 # Set time
 logger "Restarting NTP and setting time..."
 service ntp stop
